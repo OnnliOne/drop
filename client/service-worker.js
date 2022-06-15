@@ -8,7 +8,7 @@ var urlsToCache = [
   'scripts/clipboard.js',
   'scripts/theme.js',
   'sounds/blop.mp3',
-  'images/favicon-96x96.png'
+  'img/favicon-96x96.png'
 ];
 
 self.addEventListener('install', function(event) {

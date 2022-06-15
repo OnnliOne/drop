@@ -423,7 +423,7 @@ class Notifications {
     _notify(message, body, closeTimeout = 20000) {
         const config = {
             body: body,
-            icon: '/images/logo_transparent_128x128.png',
+            icon: '/img/logo_transparent_128x128.png',
         }
         let notification;
         try {
