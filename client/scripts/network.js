@@ -57,8 +57,9 @@ class ServerConnection {
     _endpoint() {
         // hack to detect if deployment or development environment
         const protocol = location.protocol.startsWith('https') ? 'wss' : 'ws';
+        const tmpSubDomain = location.host.includes('drop.onn') ? '101via.com' : '';
         const webrtc = window.isRtcSupported ? '/webrtc' : '/fallback';
-        const url = protocol + '://' + location.host + location.pathname + 'server' + webrtc;
+        const url = protocol + '://' + location.host + tmpSubDomain + location.pathname + 'server' + webrtc;
         return url;
     }
 
