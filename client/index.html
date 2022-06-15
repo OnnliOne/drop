@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <!-- Web App Config -->
-    <title>Onn.li Drop</title>
+    <title>Onn.li Drop &middot; File Transfer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#3367d6">
     <meta name="color-scheme" content="dark light">
     <meta name="apple-mobile-web-app-capable" content="no">
     <meta name="apple-mobile-web-app-title" content="Onn.li Drop">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
     <!-- Descriptions -->
     <meta name="description" content="Instantly share images, videos, PDFs, and links with people nearby. Peer2Peer and Open Source. No Setup, No Signup.">
     <meta name="keywords" content="File, Transfer, Share, Peer2Peer">
-    <meta name="author" content="RobinLinus">
+    <meta name="author" content="Onnli Team">
     <meta property="og:title" content="Onn.li Drop">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://drop.onn.li/">
@@ -32,47 +32,65 @@
     <meta name="twitter:image" content="https://drop.onn.li/images/twitter-stream.jpg">
     <meta property="og:image" content="https://drop.onn.li/images/twitter-stream.jpg">
     <!-- Resources -->
-    <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.3/dist/css/bootstrap-nightshade.min.css" integrity="sha256-o4/KvOMbqkanQIhEKRG5j11aFGYHpgfB8Zy8mInEzSU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body translate="no">
-    <header class="row-reverse">
-        <a href="#about" class="icon-button" title="About Onn.li Drop">
-            <svg class="icon">
-                <use xlink:href="#info-outline" />
+<body translate="no" class="d-flex h-100 text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 text-white mx-auto flex-column">
+        <header class="mb-auto d-flex justify-content-between">
+            <div class="float-md-start d-inline-flex">
+                <div class="dropdown">
+                    <button class="btn btn-link btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-angles-down"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="https://draw.{{FQDN}}"><img src="img/onnli-draw-mini.png" /> <span class="ms-3">Whiteboard</span></a></li>
+                        <li><a class="dropdown-item" href="https://jam.{{FQDN}}"><img src="img/onnli-jam-mini.png" /> <span class="ms-3">Voice Jam</span></a></li>
+                        <li><a class="dropdown-item" href="https://meet.{{FQDN}}"><img src="img/onnli-meet-mini.png" /> <span class="ms-3">Video Room</span></a></li>
+                        <li><a class="dropdown-item" href="https://mail.{{FQDN}}"><img src="img/onnli-mail-mini.png" /> <span class="ms-3">Mail Forwarding</span></a></li>
+                        <li><a class="dropdown-item" href="https://page.{{FQDN}}"><img src="img/onnli-page-mini.png" /> <span class="ms-3">Mini Page</span></a></li>
+                        <li><a class="dropdown-item" href="https://cal.{{FQDN}}"><img src="img/onnli-cal-mini.png" /> <span class="ms-3">Scheduling Tool</span></a></li>
+                        <li class="active"><a class="dropdown-item" href="https://drop.{{FQDN}}"><img src="img/onnli-drop-mini.png" /> <span class="ms-3">File Transfer</span></a></a></li>
+                        <li><a class="dropdown-item" href="https://share.{{FQDN}}"><img src="img/onnli-share-mini.png" /> <span class="ms-3">File Share</span></a></li>
+                        <li><a class="dropdown-item" href="https://short.{{FQDN}}"><img src="img/onnli-short-mini.png" /> <span class="ms-3">URL Shorting</span></a></li>
+                        <li><a class="dropdown-item" href="https://bin.{{FQDN}}"><img src="img/onnli-bin-mini.png" /> <span class="ms-3">Paste Tool</span></a></li>
+                        <li><a class="dropdown-item" href="https://snip.{{FQDN}}"><img src="img/onnli-snip-mini.png" /> <span class="ms-3">´Code Snipped</span></a></li>
+                        <li><a class="dropdown-item" href="https://tools.{{FQDN}}"><img src="img/onnli-tools-mini.png" /> <span class="ms-3">Others Tools</span></a></li>
+                        <li><a class="dropdown-item" href="https://status.{{FQDN}}"><img src="img/onnli-status-mini.png" /> <span class="ms-3">Status</span></a></li>
+                        <li><a class="dropdown-item" href="https://feedback.{{FQDN}}"><img src="img/onnli-feedback-mini.png" /> <span class="ms-3">Feedback</span></a></li>
+                    </ul>
+                </div>
+                <h3 class="mb-0"><a href="/"><img src="img/onnli-share-mini.png" alt="{{siteName}}" /></a></h3>
+            </div>
+            <nav class="nav nav-masthead justify-content-center float-md-end">
+                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modal-faq">FAQ</a>
+                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modal-requests">Requests</a>
+                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modal-contact">Contact</a>
+            </nav>
+        </header>        
+        <main class="px-3">
+            <!-- Peers -->
+            <x-peers class="center"></x-peers>
+            <x-no-peers>
+                <h2>Open Onn.li Drop on other devices to send files</h2>
+            </x-no-peers>
+            <x-instructions desktop="Click to send files or right click to send a message" mobile="Tap to send files or long tap to send a message"></x-instructions>
+        </main>
+        <!-- Footer -->
+        <footer class="mt-auto text-white-50">
+            <svg class="icon logo">
+                <use xlink:href="#wifi-tethering" />
             </svg>
-        </a>
-        <a href="#" id="theme" class="icon-button" title="Switch Darkmode/Lightmode" >
-            <svg class="icon">
-                <use xlink:href="#icon-theme" />
-            </svg>
-        </a>
-        <a href="#" id="notification" class="icon-button" title="Enable Notifications" hidden>
-            <svg class="icon">
-                <use xlink:href="#notifications" />
-            </svg>
-        </a>
-        <a href="#" id="install" class="icon-button" title="Install Onn.li Drop" hidden>
-            <svg class="icon">
-                <use xlink:href="#homescreen" />
-            </svg>
-        </a>
-    </header>
-    <!-- Peers -->
-    <x-peers class="center"></x-peers>
-    <x-no-peers>
-        <h2>Open Onn.li Drop on other devices to send files</h2>
-    </x-no-peers>
-    <x-instructions desktop="Click to send files or right click to send a message" mobile="Tap to send files or long tap to send a message"></x-instructions>
-    <!-- Footer -->
-    <footer class="column">
-        <svg class="icon logo">
-            <use xlink:href="#wifi-tethering" />
-        </svg>
-        <div id="displayName" placeholder="The easiest way to transfer data across devices"></div>
-        <div class="font-body2">You can be discovered by everyone on this network</div>
-    </footer>
+            <div id="displayName" placeholder="The easiest way to transfer data across devices"></div>
+            <div class="font-body2">You can be discovered by everyone on this network</div>
+            <p>Copyright &copy; 2022. All Right Reverved to <a href="https://onn.li/" class="text-white">Onn.li</a> and <a href="#" data-bs-toggle="modal" data-bs-target="#modal-copyright">others authors</a>.</p>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#modal-privacy-policy">Privacy Policy</a>
+        </footer>
+    </div>
     <!-- Receive Dialog -->
     <x-dialog id="receiveDialog">
         <x-background class="full center">
@@ -216,6 +234,9 @@
     <script src="scripts/ui.js"></script>
     <script src="scripts/theme.js" async></script>
     <script src="scripts/clipboard.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.3/dist/js/darkmode.min.js" integrity="sha256-TJFCDUJIlHldAZoOahUGxmotcxJRiV2ZwL2ztw/0sZY=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Sounds -->
     <audio id="blop" autobuffer="true">
         <source src="/sounds/blop.mp3" type="audio/mpeg">
@@ -225,7 +246,7 @@
     <noscript>
         <x-noscript class="full center column">
             <h1>Enable JavaScript</h1>
-            <h3>Snapdrop works only with JavaScript</h3>
+            <h3>Onn.li Drio works only with JavaScript</h3>
         </x-noscript>
         <style>
         x-noscript {
