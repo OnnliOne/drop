@@ -75,9 +75,8 @@ class PeerUI {
     html() {
         return `
 <div class="card border-primary m-3">
-    <div class="card-header name"></div>
     <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
+        <h5 class="card-title name"></h5>
         <p class="card-text">Click to send files or right click to send a text</p>
         <ul class="list-group list-group-flush">
             <li class="list-group-item name icon"></li>
