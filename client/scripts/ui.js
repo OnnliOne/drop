@@ -83,8 +83,8 @@ class PeerUI {
                     <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <div class="name font-subheading"></div>
-                <div class=".device-name text-white-50"></div>
-                <div class="text-white-50"></div>
+                <div class="device-name text-white-50"></div>
+                <div class="status text-white-50"></div>
             </label>`
     }
 
