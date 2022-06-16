@@ -74,19 +74,20 @@ class PeerUI {
 
     html() {
         return `
-<div class="card text-center">
+<div class="card border-primary w-25 m-3">
+    <div class="card-header name"></div>
     <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">Click to send files or right click to send a text</p>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item name">An item</li>
-            <li class="list-group-item name icon">An item</li>
-            <li class="list-group-item device-name text-white-50">A second item</li>
-            <li class="list-group-item status text-white-50">A third item</li>
+            <li class="list-group-item name icon"></li>
+            <li class="list-group-item device-name text-white-50"></li>
+            <li class="list-group-item status text-white-50"></li>
         </ul>
     </div>
     <div class="card-footer">
-        <button type="button" id="upload-btn" class="btn btn-primary btn-lg"><i class="fa-solid fa-upload"></i> Click Here or Drag or Drop</button>
+        <button type="button" id="upload-btn" class="btn btn-primary"><i class="fa-solid fa-upload"></i> Click Here or Drag or Drop</button>
         <input type="file" id="upload-input" class="form-control" name="files[]" multiple">
-        <input type="submit" value="Submit">
         <div class="progress">
             <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
