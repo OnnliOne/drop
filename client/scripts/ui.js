@@ -99,7 +99,7 @@ class PeerUI {
         el.id = this._peer.id;
         el.innerHTML = this.html();
         el.ui = this;
-        el.querySelector('icon').innerHTML =  this._icon();
+        el.querySelector('.icon').innerHTML = this._icon() || '<i class="fa-solid fa-computer"></i>';
         el.querySelector('.name').textContent = this._displayName();
         el.querySelector('.device-name').textContent = this._deviceName();
         this.$el = el;
