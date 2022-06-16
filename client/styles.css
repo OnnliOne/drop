@@ -60,7 +60,6 @@ x-peers {
 }
 
 /* Empty Peers List */
-
 x-no-peers {
     padding: 8px;
     text-align: center;
@@ -79,10 +78,7 @@ x-peers:not(:empty)+x-no-peers {
     display: none;
 }
 
-
-
 /* Peer */
-
 x-peer {
     -webkit-user-select: none;
     user-select: none;
@@ -132,7 +128,6 @@ x-peer[drop] x-icon {
 }
 
 /* Dialog */
-
 x-dialog x-background {
     background: rgba(0, 0, 0, 0.61);
     z-index: 10;
@@ -181,7 +176,6 @@ x-dialog a {
 }
 
 /* Receive Text Dialog */
-
 #receiveTextDialog #text {
     width: 100%;
     word-break: break-all;
@@ -209,7 +203,6 @@ x-dialog a {
 }
 
 /* Button */
-
 .button {
     padding: 0 16px;
     box-sizing: border-box;
@@ -274,7 +267,6 @@ button::-moz-focus-inner {
 
 
 /* Icon Button */
-
 .icon-button {
     width: 40px;
     height: 40px;
@@ -287,7 +279,6 @@ button::-moz-focus-inner {
 
 
 /* Text Input */
-
 .textarea {
     box-sizing: border-box;
     border: none;
@@ -312,7 +303,6 @@ button::-moz-focus-inner {
 }
 
 /* Toast */
-
 .toast-container {
     padding: 0 8px 24px;
     overflow: hidden;

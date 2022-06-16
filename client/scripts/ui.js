@@ -74,25 +74,19 @@ class PeerUI {
 
     html() {
         return `
-<div class="card border-primary m-3">
-    <div class="card-body">
-        <h5 class="card-title name"></h5>
-        <p class="card-text">Click to send files or right click to send a text</p>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item name icon"></li>
-            <li class="list-group-item device-name text-white-50"></li>
-            <li class="list-group-item status text-white-50"></li>
-        </ul>
-    </div>
-    <div class="card-footer">
-        <button type="button" id="upload-btn" class="btn btn-primary"><i class="fa-solid fa-upload"></i> Click Here or Drag or Drop</button>
-        <input type="file" id="upload-input" class="form-control" name="files[]" multiple">
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-    </div>
-</div>
-`
+            <label class="column center" title="Click to send files or right click to send a text">
+                <input type="file" multiple>
+                <x-icon shadow="1">
+                    <a href="#" class="icon"></a>
+                </x-icon>
+                <div class="progress-circle">
+                  <div class="circle"></div>
+                  <div class="circle right"></div>
+                </div>
+                <div class="name font-subheading"></div>
+                <div class="device-name font-body2"></div>
+                <div class="status font-body2"></div>
+            </label>`
     }
 
     constructor(peer) {
@@ -110,7 +104,7 @@ class PeerUI {
         el.querySelector('.name').textContent = this._displayName();
         el.querySelector('.device-name').textContent = this._deviceName();
         this.$el = el;
-        this.$progress = el.querySelector('.progress-bar');
+        this.$progress = el.querySelector('.progress-circle');
     }
 
     _bindListeners(el) {
@@ -138,10 +132,10 @@ class PeerUI {
     _icon() {
         const device = this._peer.name.device || this._peer.name;
         if (device.type === 'mobile') {
-            return '<i class="fa-solid fa-mobile-screen-button"></i> Phone';
+            return '<i class="fa-solid fa-mobile-screen-button"></i>';
         }
         if (device.type === 'tablet') {
-            return '<i class="fa-solid fa-tablet-screen"></i> Tablet';
+            return '<i class="fa-solid fa-tablet-screen"></i>';
         }
         return '<i class="fa-solid fa-computer"></i> Computer';
     }
