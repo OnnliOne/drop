@@ -74,7 +74,7 @@ class PeerUI {
 
     html() {
         return `
-<div class="card border-primary w-25 m-3">
+<div class="card border-primary m-3">
     <div class="card-header name"></div>
     <div class="card-body">
         <h5 class="card-title">Special title treatment</h5>
