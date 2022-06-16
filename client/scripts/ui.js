@@ -74,18 +74,17 @@ class PeerUI {
 
     html() {
         return `
-            <label class="column center" title="Click to send files or right click to send a text">
-                <input type="file" multiple>
-                <x-icon shadow="1">
-                    <svg class="icon"><use xlink:href="#"/></svg>
-                </x-icon>
+            <label for="formFileMultiple" class="form-label" title="Click to send files or right click to send a text">
+                <input id="formFileMultiple" class="form-control" type="file" multiple>
+                <button type="button" class="icon btn btn-outline-primary">
+                    
+                </button>
                 <div class="progress">
-                  <div class="circle"></div>
-                  <div class="circle right"></div>
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <div class="name font-subheading"></div>
-                <div class="device-name font-body2"></div>
-                <div class="status font-body2"></div>
+                <div class=".device-name text-white-50"></div>
+                <div class="text-white-50"></div>
             </label>`
     }
 
@@ -100,11 +99,11 @@ class PeerUI {
         el.id = this._peer.id;
         el.innerHTML = this.html();
         el.ui = this;
-        el.querySelector('svg use').setAttribute('xlink:href', this._icon());
+        el.querySelector('icon').innerHTML =  this._icon();
         el.querySelector('.name').textContent = this._displayName();
         el.querySelector('.device-name').textContent = this._deviceName();
         this.$el = el;
-        this.$progress = el.querySelector('.progress');
+        this.$progress = el.querySelector('.progress-bar');
     }
 
     _bindListeners(el) {
@@ -132,12 +131,12 @@ class PeerUI {
     _icon() {
         const device = this._peer.name.device || this._peer.name;
         if (device.type === 'mobile') {
-            return '#phone-iphone';
+            return '<i class="fa-solid fa-mobile-screen-button"></i>';
         }
         if (device.type === 'tablet') {
-            return '#tablet-mac';
+            return '<i class="fa-solid fa-tablet-screen"></i>';
         }
-        return '#desktop-mac';
+        return '<i class="fa-solid fa-computer"></i>';
     }
 
     _onFilesSelected(e) {

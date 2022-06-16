@@ -141,12 +141,6 @@ x-peer[transfer] x-icon {
     transform: scale(1);
 }
 
-.status,
-.device-name {
-    height: 18px;
-    opacity: 0.7;
-}
-
 x-peer[transfer] .status:before {
     content: 'Transferring...';
 }
