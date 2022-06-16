@@ -71,14 +71,15 @@ class PeersUI {
 }
 
 class PeerUI {
-
     html() {
         return `
             <label class="column center" title="Click to send files or right click to send a text">
                 <input type="file" multiple>
-                <x-icon shadow="1">
-                    <a href="#" class="icon"></a>
-                </x-icon>
+                <button type="button" class="btn btn-primary btn-circle btn-lg">
+                    <x-icon shadow="1">
+                        <div class="icon"></div>
+                    </x-icon>
+                </button>
                 <div class="progress-circle">
                   <div class="circle"></div>
                   <div class="circle right"></div>
