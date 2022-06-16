@@ -75,12 +75,12 @@ class PeerUI {
         return `
             <label class="column center m-2" title="Click to send files or right click to send a text">
                 <input type="file" multiple>
-                <div role="button" class="btn btn-primary btn-circle btn-xl text-center align-middle mb-1 icon"></div>
+                <div role="button" class="btn btn-primary btn-circle mb-1 icon"></div>
                 <div class="progress-circle">
                   <div class="circle"></div>
                   <div class="circle right"></div>
                 </div>
-                <div class="name fs-4" role="button"></div>
+                <div class="name fs-5" role="button"></div>
                 <div class="device-name text-white-50" role="button"></div>
                 <div class="status text-white-50"></div>
             </label>`
