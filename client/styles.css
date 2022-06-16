@@ -69,7 +69,7 @@ x-no-peers {
 	animation-fill-mode: backwards;
 }
 
-x-no-peers h2,
+x-no-peers h3,
 x-no-peers a {
 	color: var(--primary-color);
 }
