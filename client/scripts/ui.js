@@ -74,20 +74,19 @@ class PeerUI {
 
     html() {
         return `
-            <div class="m-2">
-                <label for="formFileMultiple" class="form-label" title="Click to send files or right click to send a text">Click to send files or right click to send a text</label>
-                    <input id="formFileMultiple" class="form-control" type="file" multiple>
-                    <button type="button" class="icon btn btn-outline-primary btn-lg m-2 p-3">
-                        
-                    </button>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <div class="name font-subheading"></div>
-                    <div class="device-name text-white-50"></div>
-                    <div class="status text-white-50"></div>
-                
-            </div>`
+<div class="d-grid gap-2">
+    <button type="button" id="upload-btn" class="btn btn-primary btn-lg"><i class="fa-solid fa-upload"></i> Click Here or Drag or Drop</button>
+</div>
+<input type="file" id="upload-input" class="form-control" name="files[]" multiple">
+<input type="submit" value="Submit">
+<div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="icon"></div>
+<div class="name font-subheading"></div>
+<div class="device-name text-white-50"></div>
+<div class="status text-white-50"></div>
+`
     }
 
     constructor(peer) {
