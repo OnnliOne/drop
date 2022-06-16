@@ -82,6 +82,7 @@ x-peers:not(:empty)+x-no-peers {
 x-peer {
 	-webkit-user-select: none;
 	user-select: none;
+	cursor: pointer;
 }
 
 input[type="file"] {

@@ -73,9 +73,9 @@ class PeersUI {
 class PeerUI {
     html() {
         return `
-            <label class="column center" title="Click to send files or right click to send a text">
+            <label class="column center m-2" title="Click to send files or right click to send a text">
                 <input type="file" multiple>
-                <button type="button" class="btn btn-primary btn-circle btn-lg">
+                <button type="button" class="btn btn-primary btn-circle btn-xl mb-1">
                     <x-icon class="icon"></x-icon>
                 </button>
                 <div class="progress-circle">
@@ -225,7 +225,6 @@ class Dialog {
 }
 
 class ReceiveDialog extends Dialog {
-
     constructor() {
         super('receiveDialog');
         Events.on('file-received', e => {
@@ -393,7 +392,6 @@ class Toast extends Dialog {
 
 
 class Notifications {
-
     constructor() {
         // Check if the browser supports notifications
         if (!('Notification' in window)) return;
@@ -481,7 +479,6 @@ class Notifications {
 
 
 class NetworkStatusUI {
-
     constructor() {
         window.addEventListener('offline', e => this._showOfflineMessage(), false);
         window.addEventListener('online', e => this._showOnlineMessage(), false);
@@ -535,8 +532,6 @@ class Snapdrop {
 }
 
 const snapdrop = new Snapdrop();
-
-
 
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/service-worker.js')
