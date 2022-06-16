@@ -124,9 +124,9 @@ x-peer x-icon {
 }
 
 .btn-circle.btn-xl {
-	width: 70px;
-	height: 70px;
-	padding: 17px 16px;
+	width: 60px;
+	height: 60px;
+	padding-top: 12px;
 	font-size: 24px;
 	line-height: 1.33;
 	border-radius: 35px;
