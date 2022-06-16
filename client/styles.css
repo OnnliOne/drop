@@ -143,8 +143,8 @@ x-peer x-icon {
 }
 
 .circle {
-    width: 72px;
-    height: 72px;
+    width: 80px;
+    height: 80px;
     border: 4px solid var(--primary-color);
     border-radius: 40px;
     position: absolute;
