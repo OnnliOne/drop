@@ -76,9 +76,7 @@ class PeerUI {
             <label class="column center" title="Click to send files or right click to send a text">
                 <input type="file" multiple>
                 <button type="button" class="btn btn-primary btn-circle btn-lg">
-                    <x-icon shadow="1">
-                        <div class="icon"></div>
-                    </x-icon>
+                    <x-icon class="icon"></x-icon>
                 </button>
                 <div class="progress-circle">
                   <div class="circle"></div>
@@ -133,12 +131,12 @@ class PeerUI {
     _icon() {
         const device = this._peer.name.device || this._peer.name;
         if (device.type === 'mobile') {
-            return '<i class="fa-solid fa-mobile-screen-button"></i>';
+            return '<span class="fa-solid fa-mobile-screen-button"></span>';
         }
         if (device.type === 'tablet') {
-            return '<i class="fa-solid fa-tablet-screen"></i>';
+            return '<span class="fa-solid fa-tablet-screen"></span>';
         }
-        return '<i class="fa-solid fa-computer"></i> Computer';
+        return '<span class="fa-solid fa-computer"></span>';
     }
 
     _onFilesSelected(e) {
