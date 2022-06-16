@@ -20,13 +20,6 @@ body {
     max-width: 64em;
 }
 
-/* Icons */
-.icon {
-    width: var(--icon-size);
-    height: var(--icon-size);
-    fill: currentColor;
-}
-
 /* Animations */
 @keyframes fade-in {
     0% {
